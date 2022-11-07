@@ -212,7 +212,7 @@ a {
 
 .main-title span {
     position: absolute;
-    left: 50px;
+    left: 55px;
     top: 42px;
     display: inline-block;
     width: 25px;
@@ -432,12 +432,13 @@ a {
     margin: 0 0 0 5px;
     width: 110px;
     padding-left: 25px;
+    padding-top: 2px;
     display: block;
     font-size: 17px;
     color: var(--color-primary);
     background-image: url('img/git.svg');
     background-repeat: no-repeat;
-    background-position: 0% 30%;
+    background-position: 0% 50%;
     background-size: 20px;
     transition: .2s;
 }
@@ -554,7 +555,7 @@ a {
     }
 
     .main-title span {
-        left: 80px;
+        left: 70px;
         top: 65px;
         width: 45px;
         height: 70px;
