@@ -372,7 +372,7 @@ a {
     border: 2px solid var(--purple);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border-radius: 15px;
 }
 
@@ -437,7 +437,7 @@ a {
     color: var(--color-primary);
     background-image: url('img/git.svg');
     background-repeat: no-repeat;
-    background-position: 0% 45%;
+    background-position: 0% 50%;
     background-size: 20px;
     transition: .2s;
 }
