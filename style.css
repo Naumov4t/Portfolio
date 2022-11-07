@@ -212,7 +212,7 @@ a {
 
 .main-title span {
     position: absolute;
-    left: 40px;
+    left: 45px;
     top: 42px;
     display: inline-block;
     width: 25px;
@@ -432,7 +432,7 @@ a {
     margin: 0 0 0 5px;
     width: 110px;
     padding-left: 25px;
-    padding-top: 5px;
+    padding-top: 10px;
     display: block;
     font-size: 17px;
     color: var(--color-primary);
