@@ -54,7 +54,7 @@ a {
     position: relative;
     z-index: 0;
     margin: auto;
-    max-width: 1450px;
+    max-width: 1351px;
     background: linear-gradient( #415FFF80, transparent 1px), linear-gradient( 90deg, #415FFF80, transparent 1px);
     background-size: 30px 30px;
     background-position: center center;
@@ -93,8 +93,8 @@ a {
 
 .player-icon {
     display: none;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background-image: url('img/playericon.svg');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -122,6 +122,17 @@ a {
     background-image: url('img/playbtn.svg');
     background-repeat: no-repeat;
     background-size: 100%;
+    transition: .2s;
+}
+
+.play:hover {
+    transition: .1s;
+    transform: scale(1.1);
+}
+
+.play:active {
+    transition: .1s;
+    transform: scale(.99);
 }
 
 .pause {
@@ -132,6 +143,17 @@ a {
     background-image: url('img/pausebtn.svg');
     background-repeat: no-repeat;
     background-size: 99%;
+    transition: .2s;
+}
+
+.pause:hover {
+    transition: .1s;
+    transform: scale(1.1);
+}
+
+.pause:active {
+    transition: .1s;
+    transform: scale(.99);
 }
 
 .next {
@@ -141,6 +163,7 @@ a {
     background-image: url('img/nextbtn.svg');
     background-repeat: no-repeat;
     background-size: 100%;
+    transition: .2s;
 }
 
 .prev {
@@ -151,6 +174,17 @@ a {
     background-image: url('img/prevbtn.svg');
     background-repeat: no-repeat;
     background-size: 100%;
+    transition: .2s;
+}
+
+.next:hover, .prev:hover {
+    transition: .1s;
+    transform: scale(1.05);
+}
+
+.next:active, .prev:active  {
+    transition: .1s;
+    transform: scale(.99);
 }
 
 /* main */
@@ -201,7 +235,7 @@ a {
     z-index: 2;
     width: 250px;
     align-self: center;
-    animation: moving 6s infinite linear;
+    animation: moving 8s infinite linear;
     transform-origin: cenetr;
 }
 
@@ -255,8 +289,17 @@ a {
     transition: .2s;
     background-color: var(--dark);
 }
+.project:active {
+    transition: .2s;
+    box-shadow: none;
+    transform: scale(.99);
+}
 
-.project:hover span {
+.project a {
+    color: var(--dark);
+}
+
+.project:hover a {
     transition: .2s;
     color: var(--color-primary);
 }
@@ -362,6 +405,12 @@ a {
     display: block;
     font-size: 16px;
     color: var(--color-primary);
+    transition: .2s;
+}
+
+.footer-call a:hover {
+    transition: .1s;
+    transform: scale(1.01);
 }
 
 .footer-call a:visited {
@@ -390,6 +439,12 @@ a {
     background-repeat: no-repeat;
     background-position: 0% 45%;
     background-size: 20px;
+    transition: .2s;
+}
+
+.footer-git a:hover {
+    transition: .1s;
+    transform: scale(1.02);
 }
 
 .footer-git a:visited {
@@ -420,7 +475,7 @@ a {
 .stack-container {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(6, 55px);
+    grid-template-columns: repeat(6, 50px);
     grid-gap: 5px;
 }
 
@@ -451,4 +506,409 @@ a {
 
 .stack--6 {
     background-image: url('img/stack/stack6.svg');
+}
+
+@media(min-width: 768px) {
+    .line {
+        right: 95px;
+    }
+    /* player */
+    .audio-name {
+        width: 550px;
+        font-size: 18px;
+    }
+
+    .play {
+        margin-right: 25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .pause {
+        margin-right: 25px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .next {
+        width: 35px;
+        height: 35px;
+    }
+
+    .prev {
+        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+    }
+
+    /* main */
+    .main-subtitle {
+        margin: 40px 0 0 40px;
+        font-size: 24px;
+    }
+
+    .main-title {
+        margin: 5px 0 0 40px;
+        line-height: 120%;
+        font-size: 52px;
+    }
+
+    .main-title span {
+        left: 80px;
+        top: 65px;
+        width: 45px;
+        height: 70px;
+    }
+
+    .main-pictures {
+        max-width: 700px;
+    }
+
+    .vinyl-img {
+        width: 400px;
+    }
+
+    .flowers-img {
+        top: 200px;
+        width: 330px;
+    }
+
+    /* projects */
+    .projects {
+        padding: 0;
+        max-width: 700px;
+    }
+
+    .projects-title {
+        font-size: 26px;
+    }
+
+    .projects-container {
+        grid-template-columns: 2fr 2fr 2fr;
+    }
+
+    /* education */
+    .education {
+        max-width: 700px;
+    }
+
+    .education-title {
+        font-size: 26px;
+    }
+    
+    .education-wrapper {
+        padding: 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .education-item {
+        width: 50%;
+        height: 250px;
+    }
+
+    .education-item:nth-child(2) {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+
+    /* footer */
+    .footer {
+        max-width: 700px;
+    }
+
+    .footer-info {
+        padding: 80px 0 0 50px;
+    }
+
+    .call-title, .git-title {
+        font-size: 24px;
+    }
+
+    .footer-call a {
+        font-size: 21px;
+    }
+
+    .footer-git a {
+        width: 150px;
+        padding-left: 35px;
+        font-size: 22px;
+        background-size: 25px;
+    }
+    .stack-title {
+        font-size: 21px;
+    }
+
+    .footer-picture img {
+       height: 400px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .content {
+        background-size: 50px 50px;
+    }
+    .line {
+        right: 135px;
+    }
+    /* player */
+    .player {
+        padding: 0 50px;
+    }
+    .player-icon {
+        display: block;
+    }
+    .audio-name {
+        width: 70%;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    /* main */
+    .main-subtitle {
+        margin: 40px 0 0 50px;
+        font-size: 32px;
+    }
+
+    .main-title {
+        margin: 5px 0 0 50px;
+        line-height: 110%;
+        font-size: 76px;
+        font-weight: 500;
+    }
+
+    .main-title span {
+        left: 120px;
+        top: 90px;
+        width: 55px;
+        height: 85px;
+    }
+
+    .main-pictures {
+        margin: 25px auto 50px;
+        max-width: 900px;
+    }
+
+    .vinyl-img {
+        width: 600px;
+    }
+
+    .flowers-img {
+        top: 370px;
+        width: 410px;
+    }
+
+    /* projects */
+    .projects {
+        max-width: 900px;
+    }
+    .projects-container {
+        margin-top: 65px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .projects-title {
+        font-size: 38px;
+        font-weight: 500;
+        margin: 60px 25px 0 0;
+    }
+
+    .project {
+        height: 140px;
+    }
+
+    .project span {
+        font-size: 16px;
+    }
+
+    .project img {
+        left: -30px;
+        top: -40px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .project-game p {
+        padding: 20px 20px 0 0;
+        font-size: 36px;
+    }
+
+    .project-landing p {
+        padding: 20px 20px 0 0;
+        font-size: 24px;
+    }
+
+    .project-design p {
+        padding: 20px 20px 0 0;
+        font-size: 22px;
+    }
+
+    /* education */
+    .education {
+        margin: 90px auto 0;
+        max-width: 900px;
+    }
+
+    .education-title {
+        font-size: 38px;
+        font-weight: 500;
+        margin-left: 0;
+    }
+
+    .education-wrapper {
+        margin: 45px 0 0;
+    }
+
+    .education-item {
+        height: 330px;
+    }
+
+    /* footer */
+    .footer {
+        margin: 65px auto 0;
+        max-width: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+    }
+
+    .footer-info {
+        padding: 80px 0 0 120px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .line {
+        right: 150px;
+    }
+
+    /* main */
+    .main-title {
+        line-height: 105%;
+        font-size: 96px;
+    }
+
+    .main-title span {
+        left: 152px;
+        top: 105px;
+        width: 65px;
+        height: 100px;
+    }
+
+    .main-pictures {
+        margin: 40px auto 60px;
+        max-width: 1200px;
+    }
+
+    .vinyl-img {
+        width: 750px;
+    }
+
+    .flowers-img {
+        top: 450px;
+        width: 540px;
+    }
+
+    /* projects */
+    .projects {
+        max-width: 1200px;
+    }
+
+    .projects-title {
+        font-size: 46px;
+        margin: 90px 25px 0 0;
+    }
+
+    .projects-container {
+        margin-top: 100px;
+        grid-gap: 35px 65px;
+    }
+
+    .project {
+        height: 160px;
+    }
+
+    .project img {
+        left: -45px;
+        top: -55px;
+        width: 160px;
+        height: 160px;
+    }
+
+    .projects-title {
+        font-size: 46px;
+        margin: 90px 25px 0 0;
+    }
+
+    .project-game p {
+        font-size: 44px;
+    }
+
+    .project-landing p {
+        font-size: 30px;
+    }
+
+    .project-design p {
+        font-size: 30px;
+    }
+
+    /* education */
+    .education {
+        margin: 120px auto 0;
+        max-width: 1200px;
+    }
+
+    .education-title {
+        font-size: 46px;
+    }
+
+    .education-item:nth-child(2) {
+        margin-left: 40px;
+    }
+
+    .education-item {
+        height: 425px;
+    }
+
+    /* footer */
+    .footer-info {
+        padding: 100px 0 0 120px;
+    }
+
+    .call-title, .git-title {
+        margin-bottom: 40px;
+        font-size: 42px;
+        font-weight: 500;
+    }
+
+    .footer-call, .footer-git {
+        margin-bottom: 60px;
+    }
+
+    .footer-call a {
+        font-size: 32px;
+        margin: 0 0 30px 5px;
+    }
+
+    .footer-git a {
+        width: 230px;
+        padding-left: 50px;
+        font-size: 34px;
+        background-size: 40px;
+        background-position: 0% 40%;
+    }
+
+    .stack-title {
+        font-size: 30px;
+    }
+
+    .stack-container {
+        margin-top: 25px;
+        grid-gap: 20px;
+    }
+
+    .footer-picture img {
+        height: 540px;
+    }
 }
